@@ -11,7 +11,33 @@
 
     <!-- This is the CB Cookie Consent banner -->
 
-   <!-- data-framewor allows the addition of the TCF v2.2-->
+   <!-- The below script allows the ability for publishers to restrict Vendors and Purposes. This allows the ability 
+    to control which Vendors are allowed access to the website users and for which Purposes both in general and per 
+    specific vendor-->
+
+    <script id="CookiebotConfiguration" type="application/json" data-cookieconsent="ignore">
+      {
+      "Frameworks: {
+        "IABTCF2": {
+          "AllowedVendors": [2,6,8],
+          "AllowedGoogleVendors": [],
+          "AllowedPurposes": [1,2],
+          "AllowedSpecialPurposes": [],
+          "AllowedFeatures": [1],
+          "AllowedSpecialFeatures": [1],
+          "VendorRestrictions": [
+            {
+              "VendorsId": 2,
+              "DisallowPurposes": [2,3,4]
+            }
+          ]
+        }
+      }
+      
+      }
+    </script>
+    
+    <!-- data-framewor allows the addition of the TCF v2.2-->
       <script 
         id="Cookiebot" 
         src="https://consent.cookiebot.com/uc.js" 
