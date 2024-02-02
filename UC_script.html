@@ -7,6 +7,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
      <title> My CMP V2 TestPage - Manual implementation</title> 
+
+    <!-- It's recommended to add the below 2 links to improve performance --> 
+
+    <link rel="preconnect" href="//privacy-proxy.usercentrics.eu">
+    <link rel="preload" href="//privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js" as="script">
+
     
     <!-- This is the UC Draft script -->
     
@@ -18,8 +24,31 @@
     data-settings-id="jLl8ElaFNV4foB" async></script> -->
 
     <!-- This is the script with the Geolocation ruleset -->
-    <script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" 
-      data-ruleset-id="rKh8Fm76pENRiq" async></script>
+    <!-- <script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" 
+      data-ruleset-id="rKh8Fm76pENRiq" async></script> -->
+
+    <!-- Script to test SDP (TCF) -->
+    <!-- This is the UC live script -->
+    
+    
+   <script id="usercentrics-cmp" data-settings-id="jLl8ElaFNV4foB" 
+     src="https://app.usercentrics.eu/browser-ui/latest/loader.js" data-tcf-enabled></script>
+
+    <!-- SDP script -->
+    
+    <!-- The async flag should not be set for SDP otherwise other scripts may load in // and 
+         are activated before the SDP can block them -->
+    <!-- The script must load synchronously to block technologies before they are executed. 
+         None of the following attributes should be added: 'async', 'defer'or type='module' -->
+    
+    <script type="application/javascript" 
+      src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js"></script>
+
+  
+
+
+
+
 
     <!-- Google Analytics -->
     
@@ -82,6 +111,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- When a commented out the below sscript the extra text was removed from the website and only the banner is disaplayed -->
     
   <!--<script id="CookieDeclaration" src="https://consent.cookiebot.com/61fb45e7-5ed3-4cce-a79b-ce651f1897ce/cd.js" type="text/javascript" async></script> -->   
+
+    <!-- adding an iFrame with a Youtube video to test the SDP -->
+
+    <iframe width="420" height="315"
+            uc-fsrc="https://www.youtube.com/watch?v=Rp17c3KoPfM">
+    </iframe>
     
   </body>
 </html>
