@@ -45,9 +45,48 @@
          are activated before the SDP can block them -->
     <!-- The script must load synchronously to block technologies before they are executed. 
          None of the following attributes should be added: 'async', 'defer'or type='module' -->
+
+    <!-- Note: The SDP only recognizes the predefined DPS templates. A mapping is required in the case of a 
+        custom DSP template -->
     
     <script type="application/javascript" 
       src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js"></script>
+
+    <!-- Custom DPS templates can be supported by mapping the template ID of the custom template with the respective predefined
+         template. For that, the following script is to be added -->
+
+    <!-- <script>
+      uc.setServiceAlias({'BJz7qNsdj-7': 'ttjUWJWoRBt8jE'})
+    </script> -->
+
+    <!-- Activating / Deactivating SDP for specific services 
+    
+        - The SDP will ignore unblocked Services completely. 
+        - When using 'blockOnly', the SDP will only block/unblock the mentioned services and ignore the rest.
+        - The methods 'deactivateBlocking' and 'blockOnly' shouldn't be used together
+    -->
+
+    <!-- The below script will unblock specific services -->
+
+    <!-- <script> 
+      uc.deactivateBlocking ([
+        'BJz7qNsdj-7', //Youtube is not blocked
+        'HkocEodjb7' //Google Analytics is not blocked
+      ]);
+    </script>-->
+
+    <!-- The below script will block specific services -->
+
+    <!-- <script>
+      uc.blockOnly([
+        'BJz7qNsdj-7', //Youtube is blocked
+        'HkocEodjb7' //Google Analytics is blocked
+      ]);
+    </script> -->
+
+    <!-- Displaying an overlay for custom elements -->
+
+    
 
     <!-- Google Analytics -->
     
