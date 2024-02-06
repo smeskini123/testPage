@@ -77,14 +77,48 @@
 
     <!-- The below script will block specific services -->
 
-     <script>
+     <!--<script>
       uc.blockOnly([
-        'BJz7qNsdj-7'//, //Youtube is blocked
-        //'HkocEodjb7' //Google Analytics is blocked
+        'BJz7qNsdj-7', //Youtube is blocked
+        'HkocEodjb7' //Google Analytics is blocked
       ]);
-    </script> 
+    </script> -->
 
     <!-- Displaying an overlay for custom elements -->
+    <!-- using the ID or class of the element -->
+
+    <!-- <script>
+      uc.blockElements({
+        'BJz7qNsdj-7': '#test' //Show YouTube overlay over the element with ID 'test'
+        //'BJz7qNsdj-7': '.test' //Show YouTube overlay over the element with class 'test'
+      });
+    </script> -->
+
+    <!-- Set custom text on DSP overlays -->
+    <!-- There are two ways to achieve this: 
+        1) With Javascript variables
+        2) Hosting files remotely
+    -->
+
+    <!-- 1) With Javasctipt variables -->
+
+    <script>
+      uc.setCustomTranslations({
+        //English
+        en: {
+          ACCEPT: "Custom EN Accept",
+          DEFAULT_DESCRIPTION: "Custom EN Description",
+          DEFAULT_TITLE: "Customn EN Title"
+        },
+        //German
+        de: {
+          ACCEPT: "Custom DE Accept",
+          DEFAULT_DESCRIPTION: "Custom DE Description",
+          DEFAULT_TITLE: "Custom DE Title"
+        }
+      });
+    </script>
+    
 
     
 
@@ -152,7 +186,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- adding an iFrame with a Youtube video to test the SDP -->
 
-    <iframe width="420" height="315"
+   <!-- with ID <iframe id="test" width="420" height="315"
+            uc-src="https://www.youtube.com/embed/Rp17c3KoPfM">
+    </iframe> -->
+
+      <iframe width="420" height="315"
             uc-src="https://www.youtube.com/embed/Rp17c3KoPfM">
     </iframe>
     
