@@ -119,6 +119,35 @@
         }
       });
     </script>
+
+    <!-- Reload Page on Consent Changes -->
+
+    <!-- Fallback option to trigger a page reload in order to restore technologies correctly in caser they are not 
+         enabled correctly after the consent is given. (This could be the case for certain technologies 
+         especially when implemented via JS
+
+         Note: The below script needs <script type="application/javascript" src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js"></script>
+         In our case, this was added at the top of this file as a link.
+    
+    -->
+
+    <script>
+      uc.reloadOnOptIn('BJz7qNsdj-7'); //reload page on YouTube opt-in 
+    </script>
+
+    <!-- In case the consent is revoked, a fallback option for a page reload might be needed to block the technologies correctly 
+
+          Note: The below script needs <script type="application/javascript" src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js"></script>
+         In our case, this was added at the top of this file as a link.
+    -->
+
+    <script>
+      uc.reloadOnOptOut('BJz7qNsdj-7'); // reload page on YouTube opt-out
+    </script>
+
+    
+
+    
     
 
     
