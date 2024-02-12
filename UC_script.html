@@ -242,9 +242,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Embed a single DPS with full information. The below embeds DPS= Facebook Connect-->
 
-    <div class="uc-embed" uc-consent-name="Facebook Pixel" uc-data="all"></div>
+    <!--<div class="uc-embed" uc-consent-name="Facebook Pixel" uc-data="all"></div>-->
 
     <!-- Embed a single DPS with selected information. The below embeds GTM with name, description and data purposes -->
+
+    <div class="uc-embed" uc-layout="serviceDetails" uc-consent-name="Google Tag Manager" 
+      uc-data="processorNames, description, dataPurposes">
+    </div>
     
   </body>
 </html>
