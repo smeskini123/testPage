@@ -206,6 +206,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-PFB4D4X8');</script> -->
 <!-- End Google Tag Manager -->
+
+    <!-- Consent Events -->
+    <!-- Data Layer and Window events target consent changes -->
+    <!-- consent_status: In addition to all the services and categories that are available for a specific SettingID, 
+         the below is available:  
+         "action" = from where the consent_status event was triggered.
+         "event" = contain the name of the event
+         "type" = type of the event
+                - "implicit" = when the user didn't interact with the banner 
+                - "explicit" = when the user has given any type of consent
+         "Services" = each sercvice is in a separate attribute with its corresponding consent_state (i.e "Usercentrics Consent Management Platform: true"
+         "Categories" = identifiers of all categories from the SettingID and their consent_state 
+                      (i.e "ucCategory": { "essential": true, "functional": false, "marketing": null,},
+                      when the value is 'true' ==> all services belonging to this category have the status 'true'
+                      when the value is 'false' ==> all services belonding to this category have the status 'false'
+                      when the value is 'null' ==> mixed services status   
+    -->
+    
   
   </head>
 
