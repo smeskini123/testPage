@@ -223,6 +223,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                       when the value is 'false' ==> all services belonding to this category have the status 'false'
                       when the value is 'null' ==> mixed services status   
     -->
+
+    <!-- Window Event -->
+
+    <script>
+      window.addEventListener("ucEvent", function(e) {
+        if (e.detail && e.detail.event = "consent_status") {
+          //check for consent status of service "Google Analytics"
+          if(e.detail['Google Analytics'] == true) {
+            console.log('Google Analytics has consent');
+          }
+          else {
+            console.log('Google Analytics has no consent');
+          }
+        }
+      });
+      
+    </script>
     
   
   </head>
