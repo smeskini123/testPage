@@ -9,9 +9,9 @@
      <title> My CMP V3 TestPage - Manual implementation</title> 
 
     <!-- It's recommended to add the below 2 links to improve performance --> 
-
+<!-- SDP 
     <link rel="preconnect" href="//privacy-proxy.usercentrics.eu">
-    <link rel="preload" href="//privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js" as="script">
+    <link rel="preload" href="//privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js" as="script"> -->
 
      <!-- This is the UC live script for TCF-->
     
@@ -32,8 +32,8 @@
     <!-- Note: The SDP only recognizes the predefined DPS templates. A mapping is required in the case of a 
         custom DSP template -->
     
-    <script type="application/javascript" 
-      src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js"></script>
+  <!-- SDP  <script type="application/javascript" 
+      src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js"></script> -->
 
     <!-- Custom DPS templates can be supported by mapping the template ID of the custom template with the respective predefined
          template. For that, the following script is to be added -->
@@ -85,7 +85,7 @@
 
     <!-- 1) With Javasctipt variables -->
 
-    <script>
+   <!-- SDP <script>
       uc.setCustomTranslations({
         //English
         en: {
@@ -101,7 +101,7 @@
           DEFAULT_TITLE: "Custom DE Title"
         }
       });
-    </script>
+    </script> -->
 
     <!-- Reload Page on Consent Changes -->
 
@@ -114,9 +114,9 @@
     
     -->
 
-    <script>
+   <!-- SDP <script>
       uc.reloadOnOptIn('BJz7qNsdj-7'); //reload page on YouTube opt-in 
-    </script>
+    </script> -->
 
     <!-- In case the consent is revoked, a fallback option for a page reload might be needed to block the technologies correctly 
 
@@ -124,9 +124,9 @@
          In our case, this was added at the top of this file as a link.
     -->
 
-    <script>
+   <!-- SDP <script>
       uc.reloadOnOptOut('BJz7qNsdj-7'); // reload page on YouTube opt-out
-    </script>
+    </script> -->
 
     <!-- Styling Customization (CSS) -->
 
