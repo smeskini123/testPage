@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- This is the head of the HTML page -->
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+    <title>My Sub-domain CB CMP testpage - Manual implementation to test CDCS</title>
+
+    <!-- when testing Cookiebot changes, replace the src value with the one provided from the dev team this is pre-production "https://preprod-consent-cookiebot-com.cookiebot.dev/uc.js" this is production src="https://consent.cookiebot.com/uc.js"-->
+       <script 
+        id="Cookiebot" 
+        src="https://consent.cookiebot.com/uc.js" 
+        data-cbid="61fb45e7-5ed3-4cce-a79b-ce651f1897ce" 
+        type="text/javascript">
+        </script> 
+
+    <!--data-framework="TCFv2.2"-->
+  
+    <!-- data-blockingmode="auto" --> <!-- removing this from the script and adding the TCF one -->
+  
+
+    <!-- Google Consent Mode for Cookiebot -->
+
+     <script data-cookieconsent="ignore">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        analytics_storage: "denied",
+        functionality_storage: "denied",
+        personalization_storage: "denied",
+        security_storage: "granted",
+        wait_for_update: 500,
+      });
+      gtag("set", "ads_data_redaction", true);
+      gtag("set", "url_passthrough". true); 
+    </script> 
+
+  </head>
+
+  <!-- This is the body of the HTML page -->
+
+  <body>
+
+    <h1> CookieBot Production environment through manual implementation - This is a sub-domain </h1>
+
+    <img src="https://usercentrics.com/wp-content/uploads/2020/04/190208-UCS-Logo-800px.png" alt="uc-logo">        
+    
+  </body>
+</html>
