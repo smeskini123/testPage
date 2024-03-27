@@ -2,7 +2,7 @@
 This is created to test CB banner implemented through GTM - CMP
 
 # https://smeskini123.github.io/testPage/Scriptbanner.html
-This is created to test the manually implemented banner
+This is created to test the manually implemented CB banner
 
 # https://smeskini123.github.io/testPage/subdomainPageCB.html
 This is created to test the manually implemented banner - sub-domains and CDCS (Bulk Consent)
