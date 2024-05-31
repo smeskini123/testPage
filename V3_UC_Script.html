@@ -11,7 +11,7 @@
     <!-- It's recommended to add the below 2 links to improve performance --> 
 <!-- SDP -->
     <link rel="preconnect" href="//privacy-proxy.usercentrics.eu">
-    <!-- <link rel="preload" href="//privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js" as="script"> -->
+   <link rel="preload" href="//privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js" as="script"> 
 
      <!-- This is the UC live script for TCF-->
     
@@ -89,12 +89,12 @@
     <!-- Displaying an overlay for custom elements -->
     <!-- using the ID or class of the element -->
 
-    <!-- <script>
+    <script>
       uc.blockElements({
-        'BJz7qNsdj-7': '#test' //Show YouTube overlay over the element with ID 'test'
+        'BJz7qNsdj-7': //'#test' //Show YouTube overlay over the element with ID 'test'
         //'BJz7qNsdj-7': '.test' //Show YouTube overlay over the element with class 'test'
       });
-    </script> -->
+    </script>
 
     <!-- Set custom text on DSP overlays -->
     <!-- There are two ways to achieve this: 
@@ -104,14 +104,14 @@
 
     <!-- 1) With Javasctipt variables -->
 
-   <!-- SDP <script>
+    SDP <script>
       uc.setCustomTranslations({
         //English
         en: {
           ACCEPT: "My Accept button",
-          DEFAULT_DESCRIPTION: "My Custom Description", //If there is something wrong with the CMP, NOT_PERMITTED_TEXT is shown instead of DEFAULT_DESCRIPTION
+          VIDEO_DESCRIPTION: "My Custom Description", //If there is something wrong with the CMP, NOT_PERMITTED_TEXT is shown instead of DEFAULT_DESCRIPTION
           DEFAULT_TITLE: "My Customn Title", 
-          POWERED_BY: "My website"
+          //POWERED_BY: "My website"
         },
         //German
         de: {
@@ -120,7 +120,7 @@
           DEFAULT_TITLE: "Custom DE Title"
         }
       });
-    </script> -->
+    </script>
 
     <!-- Reload Page on Consent Changes -->
 
@@ -133,9 +133,9 @@
     
     -->
 
-   <!-- SDP <script>
+    SDP <script>
       uc.reloadOnOptIn('BJz7qNsdj-7'); //reload page on YouTube opt-in 
-    </script> -->
+    </script>
 
     <!-- In case the consent is revoked, a fallback option for a page reload might be needed to block the technologies correctly 
 
