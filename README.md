@@ -16,4 +16,7 @@ This is created to test UC - CMP V3 that is manually implemented
 # https://smeskini123.github.io/testPage/UC_GTM.html
 This is created to test UC - CMP that is implemented through GTM
 
+# https://smeskini123.github.io/testPage/UC_CMP_TCF_V2_script.html
+This is created to test UC - CMP that is implemented through GTM
+
 
