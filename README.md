@@ -22,7 +22,7 @@ This is created to test UC - CMP
 # https://smeskini123.github.io/testPage/UC_CMP_VCDPA_V2.html
 This is created to test UC - CMP 
 
-# https://smeskini123.github.io/testPage/V3_GDPR_ Embeddings.html
+# https://smeskini123.github.io/testPage/V3_GDPR_Embeddings.html
 This is created to test UC - CMP V3 Embeddings for GDPR 
 
 
