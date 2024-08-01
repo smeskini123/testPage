@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- This is the head of the HTML page -->
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+     <title> My CMP V3 TestPage - Manual implementation</title> 
+
+    <!-- It's recommended to add the below 2 links to improve performance --> 
+<!-- SDP -->
+    <link rel="preconnect" href="//privacy-proxy.usercentrics.eu">
+   <link rel="preload" href="//privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js" as="script"> 
+
+     <!-- This is the UC live script for TCF-->
+    
+    <!-- <script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" 
+            data-settings-id="jLl8ElaFNV4foB" data-tcf-enabled></script> -->
+
+    <!-- V3 TCF -->
+    <!--<script src="https://web.cmp.usercentrics.eu/tcf.stub.js">--?
+    
+    <!-- V3 -->
+
+    <script
+      id="usercentrics-cmp"
+      data-settings-id="ZT_YPq2gR7UXWb"
+      src="https://web.cmp.usercentrics.eu/ui/loader.js" 
+      async>
+    </script>
+
+    <!-- V3 SDP -->
+
+    <!-- <script 
+    type="application/javascript"
+    src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js">
+    </script> -->
+
+    <!-- Non-TCF script -->
+    <!--<script id="usercentrics-cmp" data-settings-id="ZT_YPq2gR7UXWb" 
+      src="https://app.usercentrics.eu/browser-ui/latest/loader.js" async></script>-->
+
+    <!-- SDP script -->
+    
+    <!-- The async flag should not be set for SDP otherwise other scripts may load in // and 
+         are activated before the SDP can block them -->
+    <!-- The script must load synchronously to block technologies before they are executed. 
+         None of the following attributes should be added: 'async', 'defer'or type='module' -->
+
+    <!-- Note: The SDP only recognizes the predefined DPS templates. A mapping is required in the case of a 
+        custom DSP template -->
+    
+  <!-- SDP  <script type="application/javascript" 
+      src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js"></script> -->
+
+    <!-- Custom DPS templates can be supported by mapping the template ID of the custom template with the respective predefined
+         template. For that, the following script is to be added -->
+
+    <!-- <script>
+      uc.setServiceAlias({'BJz7qNsdj-7': 'ttjUWJWoRBt8jE'})
+    </script> -->
+
+    <!-- Activating / Deactivating SDP for specific services 
+    
+        - The SDP will ignore unblocked Services completely. 
+        - When using 'blockOnly', the SDP will only block/unblock the mentioned services and ignore the rest.
+        - The methods 'deactivateBlocking' and 'blockOnly' shouldn't be used together
+    -->
+
+    <!-- The below script will unblock specific services -->
+
+     <!-- <script> 
+      uc.deactivateBlocking ([
+        'BJz7qNsdj-7', //Youtube is not blocked
+        'HkocEodjb7' //Google Analytics is not blocked
+      ]);
+    </script> -->
+
+    <!-- The below script will block specific services -->
+
+     <!--<script>
+      uc.blockOnly([
+        'BJz7qNsdj-7', //Youtube is blocked
+        'HkocEodjb7' //Google Analytics is blocked
+      ]);
+    </script> -->
+
+    <!-- Displaying an overlay for custom elements -->
+    <!-- using the ID or class of the element -->
+
+    <!-- <script>
+      uc.blockElements({
+        'BJz7qNsdj-7';//: //'#test' //Show YouTube overlay over the element with ID 'test'
+        //'BJz7qNsdj-7': '.test' //Show YouTube overlay over the element with class 'test'
+      });
+    </script> -->
+
+    <!-- Set custom text on DSP overlays -->
+    <!-- There are two ways to achieve this: 
+        1) With Javascript variables
+        2) Hosting files remotely
+    -->
+
+    <!-- 1) With Javasctipt variables -->
+
+    <!--SDP--> <!-- <script>
+      uc.setCustomTranslations({
+        //English
+        en: {
+          ACCEPT: "My Accept button",
+          DEFAULT_DESCRIPTION: "My Custom Description", //If there is something wrong with the CMP, NOT_PERMITTED_TEXT is shown instead of DEFAULT_DESCRIPTION
+          DEFAULT_TITLE: "My Custom Title", 
+          POWERED_BY: "My website"
+        }//,
+        //German
+        /*de: {
+          ACCEPT: "Custom DE Accept",
+          DEFAULT_DESCRIPTION: "Custom DE Description",
+          DEFAULT_TITLE: "Custom DE Title"
+        }*/
+      });
+    </script>-->
+
+    <!-- Reload Page on Consent Changes -->
+
+    <!-- Fallback option to trigger a page reload in order to restore technologies correctly in caser they are not 
+         enabled correctly after the consent is given. (This could be the case for certain technologies 
+         especially when implemented via JS
+
+         Note: The below script needs <script type="application/javascript" src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js"></script>
+         In our case, this was added at the top of this file as a link.
+    
+    -->
+
+    <!-- SDP --> <!-- <script>
+      uc.reloadOnOptIn('BJz7qNsdj-7'); //reload page on YouTube opt-in 
+    </script> --> 
+
+    <!-- In case the consent is revoked, a fallback option for a page reload might be needed to block the technologies correctly 
+
+          Note: The below script needs <script type="application/javascript" src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js"></script>
+         In our case, this was added at the top of this file as a link.
+    -->
+
+   <!-- SDP <script>
+      uc.reloadOnOptOut('BJz7qNsdj-7'); // reload page on YouTube opt-out
+    </script> -->
+
+    <!-- Styling Customization (CSS) -->
+
+    <!-- The overlays can be customized with custom CSS code 
+    
+         Recommendation: Use the 'descendant combinator' to make the rules more specific
+    -->
+
+    <!-- Google Analytics -->
+    
+    <script type="text/plain" data-usercentrics="Google Analytics"> 
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', 'UA-183442640-1', 'auto');
+    ga('send', 'pageview');    
+    </script> 
+ 
+  </head>
+
+  <!-- This is the body of the HTML page -->
+
+  <body>
+
+    <h1> Usercentrics CMP V3 Test Page Implemented manually (JS) </h1>
+     
+    <img src="https://usercentrics.com/wp-content/uploads/2020/04/190208-UCS-Logo-800px.png" alt="uc-logo">    
+
+       <!-- Data Subject Request (DSR) intake form-->
+    <!-- <div id="usercentricsDSRForm"></div><script src="https://dsr.consent.usercentrics.eu/dsr_url.js"
+    dsr_text="INSERT_YOUR_TEXT_HERE"></script> --> 
+
+    <!-- adding an iFrame with a Youtube video to test the SDP -->
+
+      <!--<iframe width="420" height="315"
+            uc-src="https://www.youtube.com/embed/Rp17c3KoPfM">
+    </iframe>-->
+
+     <iframe src="https://www.youtube.com/embed/Rp17c3KoPfM"></iframe>
+  
+  </body>
+</html>
