@@ -17,9 +17,12 @@ This is created to test UC - CMP V3 that is manually implemented
 This is created to test UC - CMP that is implemented through GTM
 
 # https://smeskini123.github.io/testPage/UC_CMP_TCF_V2_script.html
-This is created to test UC - CMP that is implemented through GTM
+This is created to test UC - CMP 
 
 # https://smeskini123.github.io/testPage/UC_CMP_VCDPA_V2.html
-This is created to test UC - CMP that is implemented through GTM
+This is created to test UC - CMP 
+
+# https://smeskini123.github.io/testPage/V3_GDPR_Embeddings.html
+This is created to test UC - CMP V3 Embeddings for GDPR 
 
 
