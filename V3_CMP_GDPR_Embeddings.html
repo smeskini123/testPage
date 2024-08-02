@@ -8,6 +8,12 @@
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
      <title> UC CMP V3 implementing GDPR (General Data Protection Regulation) - Embeddings - Manual implementation</title> 
 
+    <!-- CSS code -->
+
+    <style>
+      
+    </style>
+
      <!-- This is the UC live script for GDPR-->
     
    <script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="ZT_YPq2gR7UXWb" async></script>
@@ -40,6 +46,45 @@
     fbq('track', 'PageView');
 </script>
 <!-- End Facebook Pixel Code -->
+
+    <!-- Script to change the Embeddings view based on the Dropdown selection -->
+
+    <script>
+      function toggleDiv()
+        {
+          let value1 = document.getElementById("select1").value;
+          let value2 = document.getElementById("select2").value;
+          let value3 = document.getElementById("select3").value;
+          let div1 = document.getElementById("one");
+          let div2 = document.getElementById("two");
+          let div3 = document.getElementById("three");
+
+          if (value1 === "show") {
+            div1.style.visibility = "visible";
+          }
+
+          else {
+            div1.style.visibility = "hidden";
+          }
+
+           if (value2 === "show") {
+            div2.style.visibility = "visible";
+          }
+
+          else {
+            div2.style.visibility = "hidden";
+          }
+
+           if (value3 === "show") {
+            div3.style.visibility = "visible";
+          }
+
+          else {
+            div3.style.visibility = "hidden";
+          }
+          
+        }      
+    </script>
 
     
   
