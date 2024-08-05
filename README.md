@@ -25,6 +25,9 @@ This is created to test UC - CMP V2 Embeddings for GDPR
 # https://smeskini123.github.io/testPage/V3_CMP_GDPR_Embeddings.html
 This is created to test UC - CMP V2 Embeddings for GDPR
 
+# https://smeskini123.github.io/testPage/UC_Script_CCPA.html
+This is created to test UC - CMP CCPA 
+
 
 
 
