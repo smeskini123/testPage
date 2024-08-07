@@ -73,6 +73,15 @@
           let div5 = document.getElementById("toggle_on");
           let div6 = document.getElementById("toggle_off");
 
+           if (value1 === "hide_all") {
+              div1.style.visibility = "hidden";
+              div2.style.visibility = "hidden";
+              div3.style.visibility = "hidden";
+              div4.style.visibility = "hidden";
+              div5.style.visibility = "hidden";
+              div6.style.visibility = "hidden";
+          }
+          
           if (value1 === "show_all") {
             div1.style.visibility = "visible";
           }
@@ -81,7 +90,7 @@
             div1.style.visibility = "hidden";
           }
 
-           if (value2 === "show_service") {
+           if (value1 === "show_service") {
             div2.style.visibility = "visible";
           }
 
@@ -89,7 +98,7 @@
             div2.style.visibility = "hidden";
           }
 
-           if (value3 === "show_cat_only") {
+           if (value1 === "show_cat_only") {
             div3.style.visibility = "visible";
           }
 
@@ -97,7 +106,7 @@
             div3.style.visibility = "hidden";
           }
 
-            if (value4 === "show_cat_with_serv") {
+            if (value1 === "show_cat_with_serv") {
             div4.style.visibility = "visible";
           }
 
@@ -105,7 +114,7 @@
             div4.style.visibility = "hidden";
           }
 
-             if (value5 === "show_toggle") {
+             if (value1 === "show_toggle") {
             div5.style.visibility = "visible";
           }
 
@@ -113,7 +122,7 @@
             div5.style.visibility = "hidden";
           }
 
-             if (value6 === "hide_toggle") {
+             if (value1 === "hide_toggle") {
             div6.style.visibility = "visible";
           }
 
@@ -140,6 +149,7 @@
       <div class="input">
         <label for="selectLabel">Embed Style:</label>
         <select id="select1" onchange="toggleDiv()">
+          <option value="hide_all">--Select an option--</option>
           <option value="show_all">Show All</option>
           <option value="show_service">Embed a specific DPS</option>
           <option value="show_cat_only">Embed categpries only</option>
