@@ -53,8 +53,8 @@
       function toggleDiv()
         {
           let value1 = document.getElementById("select1").value;
-          let value2 = document.getElementById("select2").value;
-          let value3 = document.getElementById("select3").value;
+          /*let value2 = document.getElementById("select2").value;
+          let value3 = document.getElementById("select3").value;*/
           let div1 = document.getElementById("embedd_all");
           let div2 = document.getElementById("embed_service");
           let div3 = document.getElementById("cat_only");
@@ -62,7 +62,7 @@
           let div5 = document.getElementById("toggle_on");
           let div6 = document.getElementById("toggle_off");
 
-          if (value1 === "show") {
+          if (value1 === "show_all") {
             div1.style.visibility = "visible";
           }
 
@@ -70,7 +70,7 @@
             div1.style.visibility = "hidden";
           }
 
-           if (value2 === "show") {
+           if (value2 === "show_service") {
             div2.style.visibility = "visible";
           }
 
@@ -78,12 +78,36 @@
             div2.style.visibility = "hidden";
           }
 
-           if (value3 === "show") {
+           if (value3 === "show_cat_only") {
             div3.style.visibility = "visible";
           }
 
           else {
             div3.style.visibility = "hidden";
+          }
+
+            if (value4 === "show_cat_with_serv") {
+            div4.style.visibility = "visible";
+          }
+
+          else {
+            div4.style.visibility = "hidden";
+          }
+
+             if (value5 === "show_toggle") {
+            div5.style.visibility = "visible";
+          }
+
+          else {
+            div5.style.visibility = "hidden";
+          }
+
+             if (value6 === "hide_toggle") {
+            div6.style.visibility = "visible";
+          }
+
+          else {
+            div6.style.visibility = "hidden";
           }
           
         }      
@@ -105,12 +129,12 @@
       <div class="input">
         <label for="selectLabel">Embed Style:</label>
         <select id="select1" onchange="toggleDiv()">
-          <option value="show">Show All</option>
-          <option value="hide">Embed a specific DPS</option>
-          <option value="hide">Embed categpries only</option>
-          <option value="hide">Embed categories with service information</option>
-          <option value="hide">Show Category toggles</option>
-          <option value="hide">Hide Category toggles</option>
+          <option value="show_all">Show All</option>
+          <option value="show_service">Embed a specific DPS</option>
+          <option value="show_cat_only">Embed categpries only</option>
+          <option value="show_cat_with_serv">Embed categories with service information</option>
+          <option value="show_toggle">Show Category toggles</option>
+          <option value="hide_toggle">Hide Category toggles</option>
         </select>
       </div>
 
