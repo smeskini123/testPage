@@ -84,50 +84,118 @@
           
           if (value1 === "show_all") {
             div1.style.visibility = "visible";
+            div2.style.visibility = "hidden";
+              div3.style.visibility = "hidden";
+              div4.style.visibility = "hidden";
+              div5.style.visibility = "hidden";
+              div6.style.visibility = "hidden";
           }
 
           else {
             div1.style.visibility = "hidden";
+            div2.style.visibility = "hidden";
+              div3.style.visibility = "hidden";
+              div4.style.visibility = "hidden";
+              div5.style.visibility = "hidden";
+              div6.style.visibility = "hidden";
           }
 
            if (value1 === "show_service") {
             div2.style.visibility = "visible";
+            div1.style.visibility = "hidden";
+              div3.style.visibility = "hidden";
+              div4.style.visibility = "hidden";
+              div5.style.visibility = "hidden";
+              div6.style.visibility = "hidden";
           }
 
           else {
+            div1.style.visibility = "hidden";  
             div2.style.visibility = "hidden";
+              div3.style.visibility = "hidden";
+              div4.style.visibility = "hidden";
+              div5.style.visibility = "hidden";
+              div6.style.visibility = "hidden";
           }
 
            if (value1 === "show_cat_only") {
             div3.style.visibility = "visible";
+             div1.style.visibility = "hidden";  
+            div2.style.visibility = "hidden";
+              
+              div4.style.visibility = "hidden";
+              div5.style.visibility = "hidden";
+              div6.style.visibility = "hidden";
           }
 
           else {
             div3.style.visibility = "hidden";
+            div1.style.visibility = "hidden";  
+            div2.style.visibility = "hidden";
+             
+              div4.style.visibility = "hidden";
+              div5.style.visibility = "hidden";
+              div6.style.visibility = "hidden";
           }
 
             if (value1 === "show_cat_with_serv") {
             div4.style.visibility = "visible";
+              div1.style.visibility = "hidden";  
+            div2.style.visibility = "hidden";
+              div3.style.visibility = "hidden";
+              
+              div5.style.visibility = "hidden";
+              div6.style.visibility = "hidden";
           }
 
           else {
             div4.style.visibility = "hidden";
+            div1.style.visibility = "hidden";  
+            div2.style.visibility = "hidden";
+              div3.style.visibility = "hidden";
+              
+              div5.style.visibility = "hidden";
+              div6.style.visibility = "hidden";
           }
 
              if (value1 === "show_toggle") {
             div5.style.visibility = "visible";
+               div1.style.visibility = "hidden";  
+            div2.style.visibility = "hidden";
+              div3.style.visibility = "hidden";
+              div4.style.visibility = "hidden";
+              
+              div6.style.visibility = "hidden";
           }
 
           else {
             div5.style.visibility = "hidden";
+            div1.style.visibility = "hidden";  
+            div2.style.visibility = "hidden";
+              div3.style.visibility = "hidden";
+              div4.style.visibility = "hidden";
+              
+              div6.style.visibility = "hidden";
           }
 
              if (value1 === "hide_toggle") {
             div6.style.visibility = "visible";
+               div1.style.visibility = "hidden";  
+            div2.style.visibility = "hidden";
+              div3.style.visibility = "hidden";
+              div4.style.visibility = "hidden";
+              div5.style.visibility = "hidden";
+              
           }
 
           else {
             div6.style.visibility = "hidden";
+            div1.style.visibility = "hidden";  
+            div2.style.visibility = "hidden";
+              div3.style.visibility = "hidden";
+              div4.style.visibility = "hidden";
+              div5.style.visibility = "hidden";
+              
           }
           
         }      
@@ -170,7 +238,7 @@
 
     <!-- Dropwdown list option = "Show All"-->
 
-    <div id="embedd_all" class="uc-embed"></div>
+    <div id="embedd_all" class="uc-embed" visibility="hidden"></div>
 
     <!-- Dropwdown list option = "Embed a specific DPS"-->
 
@@ -178,6 +246,7 @@
 
     <div 
       id="embed_service"
+      visibility="hidden"
       class="uc-embed"
       uc-embed-type="service-specific"
       uc-embed-service-id="HkocEodjb7">
@@ -187,6 +256,7 @@
 
     <div
       id="cat_only"
+      visibility="hidden"
       class="uc-embed"
       uc-embed-type="category-only">
     </div>
@@ -195,6 +265,7 @@
 
     <div 
       id="cat_and_service"
+      visibility="hidden"
       class="uc-embed"
       uc-embed-type="category">
     </div>
@@ -203,6 +274,7 @@
 
     <div 
       id="toggle_on"
+      visibility="hidden"
       class="uc-embed"
       uc-embed-type="catgory"
       uc-embed-show-toggle="true">
@@ -213,6 +285,7 @@
 
       <div 
       id="toggle_off"
+      visibility="hidden"
       class="uc-embed"
       uc-embed-type="catgory-only"
       uc-embed-show-toggle="false">
