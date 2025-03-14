@@ -37,6 +37,9 @@ This is created to test UC - CMP GPP V2
 # https://smeskini123.github.io/testPage/UC_CMP_GDPR_V3.html
 This is created to test OneCMP CB template
 
+# https://smeskini123.github.io/testPage/UC_CMP_GDPR_V2.html
+This is created to test V2 CMP
+
 
 
 
