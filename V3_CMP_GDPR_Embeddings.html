@@ -66,6 +66,7 @@
           let value1 = document.getElementById("select1").value;
           /*let value2 = document.getElementById("select2").value;
           let value3 = document.getElementById("select3").value;*/
+          let div = document.getElementById("embed_container");
           let div1 = document.getElementById("embedd_all");
           let div2 = document.getElementById("embed_service");
           let div3 = document.getElementById("cat_only");
@@ -74,12 +75,12 @@
           let div6 = document.getElementById("toggle_off");
 
            if (value1 === "hide_all") {
-              div1.style.visibility = "hidden";
-              div2.style.visibility = "hidden";
+              div.style.visibility = "hidden";
+              /*div2.style.visibility = "hidden";
               div3.style.visibility = "hidden";
               div4.style.visibility = "hidden";
               div5.style.visibility = "hidden";
-              div6.style.visibility = "hidden";
+              div6.style.visibility = "hidden";*/
           }
           
           if (value1 === "show_all") {
@@ -211,7 +212,7 @@
     <!-- Embed everything for the GDOR CMP -->
 
     <!-- Dropwdown list option = "Show All"-->
-    <div class="container">
+    <div class="container" id="embed_container">
 
     <div id="embedd_all" class="uc-embed" visibility="hidden"></div>
 
